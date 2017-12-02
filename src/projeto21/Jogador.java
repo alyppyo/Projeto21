@@ -21,4 +21,28 @@ public class Jogador {
     public Jogador() {
         cartasSacadas = new ArrayList<Carta>();
     }
+    
+    // Construtor extra
+    public Jogador(String nome) {
+        this.nome = nome;
+        cartasSacadas = new ArrayList<Carta>();
+    }
+    
+    // Obter pontos do jogador
+    public int getPontos() {
+        // Declaração de variáveis
+        int pontos = 0;
+        
+        // Percorrer as cartas sacadas
+        for(Carta c : cartasSacadas)
+            pontos += c.getValor();
+        
+        // Retornar pontuação
+        return pontos;
+    }
+    
+    // Adicionar cartas sacadas durante o jogo
+    public void adicionarCartaSacada(Carta c) {
+        cartasSacadas.add(c);
+    }
 }

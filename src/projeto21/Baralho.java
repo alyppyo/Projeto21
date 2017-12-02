@@ -6,6 +6,7 @@
 package projeto21;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -54,5 +55,13 @@ public class Baralho {
     public void listarCartas(){
         for (Carta c : this.cartas) 
             System.out.println(c.getNumero() +" de "+c.getNaipe() +". Valor: "+ c.getValor());
+    }
+    
+    public Carta pegarCarta() {
+        return cartas.remove(0);
+    }
+    
+    public void embaralhar() {
+        Collections.shuffle(cartas);
     }
 }

@@ -15,9 +15,9 @@ public class Projeto21 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Baralho bara = new Baralho();
+        Mesa mesa = new Mesa();
         
-        bara.listarCartas();
+        mesa.jogar();
     }
     
 }
